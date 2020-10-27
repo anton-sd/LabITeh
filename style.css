@@ -1,0 +1,53 @@
+body{
+ background: #e0e3ec;
+}
+
+.accordion { 
+
+  width: 600px;
+  position: absolute;
+  right: 540px;
+  top: 10px;
+
+}
+
+.accordion > :not(input):not(label) {
+  
+  overflow: hidden;
+  height: 0;
+  margin: 0;
+  padding: 0 .5em;
+  border: 1px solid #0b003a;
+  border-top-style: none;
+  transition: 0.5s;
+
+}
+
+.accordion > input {
+
+  display: none;
+
+}
+
+.accordion > label {
+
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  display: block;
+  padding: 5px 10px;
+  background: orange;
+  color: black;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  text-align: center;
+  
+}
+
+.accordion > :checked + label + * {
+  
+  overflow: auto;
+  height: auto;
+  background: snow;
+
+}
